@@ -2,19 +2,23 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 
-
-
 const Homepage = () => {
   const [categories, setCategories] = useState([]);
   const [words, setWords] = useState([]);
   const [loading, setLoading] = useState(true);
-  
- // const API_URL = import.meta.env.VITE_API_URL;
+
+  const API_URL = import.meta.env.VITE_API_URL;
   // Fetch categories and words
   useEffect(() => {
     Promise.all([
-      fetch('https://fullstack-speakeasy-project.onrender.com/categories').then((res) => res.json()),
-      fetch('https://fullstack-speakeasy-project.onrender.com/words').then((res) => res.json()),
+      fetch(
+        'https://fullstack-speakeasy-project.onrender.com/categories' ||
+          `http://localhost:3000/categories`
+      ).then((res) => res.json()),
+      fetch(
+        'https://fullstack-speakeasy-project.onrender.com/words' ||
+          `'http://localhost:3000/words'`
+      ).then((res) => res.json()),
     ])
       .then(([categoriesData, wordsData]) => {
         setCategories(categoriesData);
