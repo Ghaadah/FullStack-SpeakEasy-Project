@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test:jest": "jest api/backend-tests",
-    "test:vitest": "vitest src",
+    "test:vitest": "vitest src/frontend-tests",
     "test": "npm run test:jest && npm run test:vitest"
   },
   "dependencies": {
@@ -46,12 +46,10 @@
     "supertest": "^7.0.0",
     "vite": "^6.1.0"
   },
-
   "jest": {
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "src"
     ]
   }
-
 }
