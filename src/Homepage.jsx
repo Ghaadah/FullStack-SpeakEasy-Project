@@ -10,8 +10,8 @@ const Homepage = () => {
   // Fetch categories and words
   useEffect(() => {
     Promise.all([
-      fetch('http://localhost:3000/categories').then((res) => res.json()),
-      fetch('http://localhost:3000/words').then((res) => res.json()),
+      fetch('${API_URL}/categories').then((res) => res.json()),
+      fetch('${API_URL}/words').then((res) => res.json()),
     ])
       .then(([categoriesData, wordsData]) => {
         setCategories(categoriesData);
