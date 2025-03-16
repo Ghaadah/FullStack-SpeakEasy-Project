@@ -3,14 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "test:jest": "jest api/backend-tests",
-    "test:vitest": "vitest src",
-    "test": "npm run test:jest && npm run test:vitest"
+   "scripts": {
+  "start": "node api.js",
+  "dev": "nodemon api.js",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "test:jest": "jest api/backend-tests",
+  "test:vitest": "vitest src",
+  "test": "npm run test:jest && npm run test:vitest"
+}
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
