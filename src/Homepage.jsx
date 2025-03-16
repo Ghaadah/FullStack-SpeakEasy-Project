@@ -13,8 +13,8 @@ const Homepage = () => {
   // Fetch categories and words
   useEffect(() => {
     Promise.all([
-      fetch('${API_URL}/categories').then((res) => res.json()),
-      fetch('${API_URL}/words').then((res) => res.json()),
+      fetch('https://fullstack-speakeasy-project.onrender.com/categories').then((res) => res.json()),
+      fetch('https://fullstack-speakeasy-project.onrender.com/words').then((res) => res.json()),
     ])
       .then(([categoriesData, wordsData]) => {
         setCategories(categoriesData);
