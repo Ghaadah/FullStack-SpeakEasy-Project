@@ -5,26 +5,83 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.word-list li {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.word-list-container {
+  padding-top: 150px;
+}
+
+.word-button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+  border-radius: 10px;
+  color: darkblue;
+  border: 2px solid black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.word-button:hover {
+  background-color: darkkhaki;
+  border-color: black;
+}
+
+.word-button img {
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.word-button:focus {
+  outline: 2px solid blue;
+}
+
+.word-button:hover,
+.word-button:focus {
+  background-color: darkkhaki;
+  border-color: black;
+  transition: background-color 0.3s ease, color 0.1s ease,
+    border-color 0.1s ease;
+}
+.category-button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  border-radius: 10px;
+  color: darkblue;
+  border: 2px solid black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.category-button:hover {
+  background-color: rgb(58, 58, 236);
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,20 +97,12 @@
 .read-the-docs {
   color: #888;
 }
-/* PictogramFetcher.css */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
-  gap: 16px; /* Adds space between the images */
-  padding: 16px; /* Adds padding around the grid */
-}
 
-.image-item {
-  text-align: center; /* Centers text below the image */
+.category-main {
+  margin-top: 140px;
 }
+.word-button, .category-button {
+  min-width: 150px; 
+  min-height: 100px; 
 
-.pictogram-image {
-  width: 100%;  /* Makes the image fill the width of the container */
-  max-width: 250px; /* Limits the maximum size of the image */
-  height: auto;  /* Maintains aspect ratio */
 }
