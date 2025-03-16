@@ -9,7 +9,7 @@ const Homepage = () => {
   const [words, setWords] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  const API_URL = import.meta.env.VITE_API_URL;
+ // const API_URL = import.meta.env.VITE_API_URL;
   // Fetch categories and words
   useEffect(() => {
     Promise.all([
