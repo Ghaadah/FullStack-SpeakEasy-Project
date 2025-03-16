@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+
   plugins: [react()], // Enable React support
   test: {
     include: ["src/**/*.test.jsx"], // Only run tests in the src directory
@@ -10,3 +11,4 @@ export default defineConfig({
     globals: true, // Enable global variables like `describe`, `it`, and `expect`
   },
 });
+
